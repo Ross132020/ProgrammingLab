@@ -31,6 +31,8 @@
 #print('lista:{}'.format(myfile))
 
 
+
+
 def sommalista(lista):
     risultato=0
     for item in lista:
