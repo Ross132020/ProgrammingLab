@@ -43,18 +43,7 @@ def somma_valori(myfile):
             values.append(float(numero))
     myfile.close()
     return(sum(values))
-#myfileshampoo=open('shampoo_sales.csv','r')
-#risultato=somma_valori(myfileshampoo)
-#print('risultato somma: {}'.format(risultato))
+myfileshampoo=open('shampoo_sales.csv','r')
+risultato=somma_valori(myfileshampoo)
+print('risultato somma: {}'.format(risultato))
 
-lista=[]
-file2=open('shampoo_sales.csv','r')
-print(file2.read())
-for line in file2:
-    elementi=(line.split(','))
-    print(elementi)
-    if(elementi[0] != 'Date'):
-        num=elementi[1]
-        lista.append(float(num))
-print(sum(lista))
-file2.close()
