@@ -31,7 +31,12 @@
 #print('lista:{}'.format(myfile))
 
 
-
+def sommalista(lista):
+    risultato=0
+    for item in lista:
+        risultato=risultato+item
+    print('risultato lista: {}'.format(risultato))
+    return risultato
 
 
 def somma_valori(myfile):
@@ -42,8 +47,10 @@ def somma_valori(myfile):
             numero=elements[1]
             values.append(float(numero))
     myfile.close()
-    return(sum(values))
+    result=sommalista(values)
+    return result
+    #return(sum(values))
 myfileshampoo=open('shampoo_sales.csv','r')
 risultato=somma_valori(myfileshampoo)
-print('risultato somma: {}'.format(risultato))
+#print('risultato somma: {}'.format(risultato))
 
