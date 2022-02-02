@@ -1,6 +1,6 @@
 # esercizio slide 4 Lab.
 
-class slides():
+class CSVFile():
 
     def __init__(self,date,sales):
         self.date = date
@@ -11,6 +11,8 @@ class slides():
         for i in range(0,len(lista)):
             concatenate =str(lista(data)) + str(lista(sales)) #oppure si utilizza la funzione __str__(self,......) indicandone il ritorno con return
 
-
-Esercizio = slides.get_data(open('shampoo_sales.csv','r')
-print('soluzione: {}'.format(Esercizio))
+try:
+    esercizio = CSVFile.get_data(open('shampoo_sales.csv','r'))
+    print('soluzione: {}'.format(esercizio))
+except Exception as e:
+    print('errore rilevato: "{}"'.format(e))
